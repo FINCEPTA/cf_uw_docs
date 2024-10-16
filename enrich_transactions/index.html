@@ -1,0 +1,998 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../enrich_report/">
+      
+      
+        <link rel="next" href="../feedback/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>Enrich Transaction - Fincepta CashFlow Intelligence API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CAttentica+4F:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Attentica 4F"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="fincepta-dark" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#enrich-transactions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Fincepta CashFlow Intelligence API" class="md-header__button md-logo" aria-label="Fincepta CashFlow Intelligence API" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fincepta CashFlow Intelligence API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Enrich Transaction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="fincepta-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="fincepta-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fincepta CashFlow Intelligence API" class="md-nav__button md-logo" aria-label="Fincepta CashFlow Intelligence API" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Fincepta CashFlow Intelligence API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Enrich
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Enrich
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrich/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enrich_report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enrich Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Enrich Transaction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Enrich Transaction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Input Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../score/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Score
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combinations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combinations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Input Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="enrich-transactions"><strong>Enrich Transactions</strong></h1>
+<h2 id="overview">Overview</h2>
+<p>The <code>/v1/enrich_transaction</code> endpoint enriches transaction data by categorizing the transactions into our custom categories.</p>
+<h2 id="how-to-use">How to Use</h2>
+<ul>
+<li><strong>HTTP Method</strong>: <code>POST</code></li>
+<li><strong>Headers</strong>:</li>
+<li><code>x-api-key</code>: Your API key for authorization.</li>
+<li>
+<p><code>x-client-id</code>: Your client ID for validation.</p>
+</li>
+<li>
+<p><strong>Request Body</strong>:</p>
+</li>
+<li>Data can be sent as a JSON file or as JSON data in the request body.</li>
+<li>The file should be in <code>.json</code> format if uploading, and the parameter should be <code>file</code>.</li>
+<li>If sending data in the request body, make sure it is in JSON format.</li>
+</ul>
+<h3 id="sample-input-data">Sample Input Data</h3>
+<pre><code class="language-json">{
+    &quot;transactions&quot;: [
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        },
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        }
+
+    ]
+}
+</code></pre>
+<p><strong><em>NOTE</em></strong>
+- JSON input with key <code>transactions</code> and value is a <code>list</code> of <code>dictionary</code> of transactions,
+- Required fields in the dictionary of each transaction are <code>transaction_id</code>, <code>description</code>, <code>amount</code>, <code>date</code>, <code>iso_currency_code</code>
+- This endpoint supports both JSON data and JSON files as input.</p>
+<h3 id="example-request">Example Request</h3>
+<ul>
+<li>Python</li>
+</ul>
+<pre><code class="language-python">import requests
+import json
+
+url = &quot;https://your-api-url/v1/enrich&quot;
+headers = {
+    &quot;x-api-key&quot;: &quot;your_api_key&quot;,
+    &quot;x-client-id&quot;: &quot;your_client_id&quot;
+}
+data = {
+    &quot;transactions&quot;: [
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        },
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        }
+
+    ]
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(data))
+
+print(response.json())
+</code></pre>
+<ul>
+<li>Curl</li>
+</ul>
+<pre><code class="language-bash">curl -X POST &quot;https://your-api-url/v1/enrich&quot; \
+-H &quot;x-api-key: your_api_key&quot; \
+-H &quot;x-client-id: your_client_id&quot; \
+-d &quot;{
+    &quot;transactions&quot;: [
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        },
+        {   &quot;transaction_id&quot;: &quot;transaction_id&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;amount&quot;: 0.0,
+            &quot;date&quot;: &quot;2021-04-01&quot;,
+            &quot;iso_currency_code&quot;: &quot;iso_currency_code&quot;,
+        }
+
+    ]
+}&quot;
+</code></pre>
+<h3 id="example-response">Example Response</h3>
+<div style="overflow-x: auto; max-width: 100%; max-height: 400px; overflow-y: auto;">
+<pre><code>
+
+<pre><code class="language-json">{
+  'enriched_transactions':
+  [
+  {'account_id': '10bfb591-da0b-48d1-a647-c8d3e5eb7cc6',
+   'amount': -250.0,
+   'date': '2021-07-22',
+   'description': 'Online Transfer from SAV ...6830 transaction#: 12229037507',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_credit',
+   'transaction_category_num': 116,
+   'transaction_id': '182c43e0-8d10-4d51-938b-67d9f257b212'},
+  {'account_id': '01e357b1-e621-42b4-a47e-4ba2c4fae64b',
+   'amount': 70.0,
+   'date': '2021-02-03',
+   'description': 'VENMO            PAYMENT    5205841049      WEB ID: 3264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_debit',
+   'transaction_category_num': 18,
+   'transaction_id': 'ff9989f5-83db-444c-9ca8-3ab51ee496da'},
+  {'account_id': '58790645-dc1e-4947-847a-d4369e245324',
+   'amount': 10.56,
+   'date': '2020-12-28',
+   'description': 'TARGET DEBIT CRD ACH TRAN   000681481903991 WEB ID: 1410215170',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'groceries_debit',
+   'transaction_category_num': 65,
+   'transaction_id': '632f96af-816e-4409-bd96-fb651fe52210'},
+  {'account_id': '883585c9-8069-429c-a3d3-0cc40fd1f56e',
+   'amount': 30.0,
+   'date': '2021-01-19',
+   'description': 'VENMO            PAYMENT    5107205503      WEB ID: 3264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_debit',
+   'transaction_category_num': 18,
+   'transaction_id': '9719fb97-0dc9-4167-b558-4ca88bb49836'},
+  {'account_id': 'b9d35a2a-4762-4831-8a8a-3a147c34f344',
+   'amount': 85.63,
+   'date': '2021-03-10',
+   'description': 'TARGET DEBIT CRD ACH TRAN   000681481901399 POS ID: 1410215170',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'groceries_debit',
+   'transaction_category_num': 65,
+   'transaction_id': '44649b83-45df-4d0e-bf18-44f96ece3367'},
+  {'account_id': '7b779271-8fdd-435a-962a-d7ef423b4f01',
+   'amount': 33.59,
+   'date': '2021-08-11',
+   'description': 'AFFIRM *PAYMENT 855-423-3729 CA              08/10',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'bnplpmnt_debit',
+   'transaction_category_num': 42,
+   'transaction_id': 'd2152a8f-de3b-448e-8034-e7d167b46d1a'},
+  {'account_id': 'b7765b2a-b407-4155-b644-289f8d2460e5',
+   'amount': 400.0,
+   'date': '2020-02-24',
+   'description': 'Payment to Chase card ending in 9617 02/24',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_debit',
+   'transaction_category_num': 117,
+   'transaction_id': '554933aa-a46d-4bcd-8a1a-db614ccde300'},
+  {'account_id': 'f71661d6-9896-4c77-b429-f4d0db05a2ee',
+   'amount': 250.0,
+   'date': '2021-06-25',
+   'description': 'Online Transfer to  SAV ...4260 transaction#: 11956760410',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_debit',
+   'transaction_category_num': 117,
+   'transaction_id': '06182999-8149-4757-bc3c-22817905db3e'},
+  {'account_id': 'eecdf14e-5e31-4fef-8976-50709c1b9d83',
+   'amount': 300.0,
+   'date': '2021-07-01',
+   'description': 'VENMO            PAYMENT    1014465676779   WEB ID: 3264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_debit',
+   'transaction_category_num': 18,
+   'transaction_id': '6665c42c-fa76-496f-b4c7-bd0dee3fca83'},
+  {'account_id': '051d7f8f-2b95-426f-b5fd-2cc21732f82d',
+   'amount': 25.0,
+   'date': '2021-09-20',
+   'description': 'STARBUCKS 800-782-728 800-782-7282 WA        09/17',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'food_debit',
+   'transaction_category_num': 53,
+   'transaction_id': 'fd2671b9-a06f-4279-9523-1c3ef45cf8e0'},
+  {'account_id': 'f3d6466f-a36a-40a4-87ba-e2ee474a1893',
+   'amount': 2.34,
+   'date': '2021-03-15',
+   'description': 'TARGET DEBIT CRD ACH TRAN   000681481903991 WEB ID: 1410215170',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'groceries_debit',
+   'transaction_category_num': 65,
+   'transaction_id': '52c31c4c-0f4d-4b7b-a238-7ff401a15346'},
+  {'account_id': 'e61b6dec-b793-4813-8213-ec3541f48f0c',
+   'amount': -39.72,
+   'date': '2020-11-13',
+   'description': 'VENMO            CASHOUT                    PPD ID: 5264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_credit',
+   'transaction_category_num': 17,
+   'transaction_id': 'aa754f05-9a72-4dda-b6ce-eb6ae0cc790e'},
+  {'account_id': '716cc7ab-c1c6-4ed9-8e19-91199b767023',
+   'amount': 500.0,
+   'date': '2019-10-15',
+   'description': 'Payment to Chase card ending in 9617 10/15',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_debit',
+   'transaction_category_num': 117,
+   'transaction_id': 'f09b570f-b821-4ecf-a9fb-c320a65298f1'},
+  {'account_id': '41f52e49-ee8d-4014-b7d5-b8e145a328af',
+   'amount': 18.83,
+   'date': '2021-06-14',
+   'description': 'TARGET DEBIT CRD ACH TRAN   000681481903991 WEB ID: 1410215170',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'groceries_debit',
+   'transaction_category_num': 65,
+   'transaction_id': '0251b871-cefa-47c9-bf93-62ec317c9db2'},
+  {'account_id': 'e5e61aab-f39a-4ab1-b8fc-b7aacb8d3f0c',
+   'amount': 1000.0,
+   'date': '2021-02-25',
+   'description': 'Online Transfer to SAV ...4260 transaction#: 11253495056 02/25',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_debit',
+   'transaction_category_num': 117,
+   'transaction_id': 'b05db037-9fe5-4f67-9b25-739922e1090d'},
+  {'account_id': '8d477ff8-aae0-4262-ac21-88f2e6fa95f9',
+   'amount': 58.0,
+   'date': '2021-08-16',
+   'description': 'VENMO            PAYMENT    1015216990266   WEB ID: 3264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_debit',
+   'transaction_category_num': 18,
+   'transaction_id': '639ce8fb-25b7-4a41-869c-646c25ca916b'},
+  {'account_id': '6de3259e-bee4-4062-929a-3d01a84e6bf3',
+   'amount': -600.0,
+   'date': '2021-02-02',
+   'description': 'VENMO            CASHOUT                    PPD ID: 5264681992',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'p2ptrfr_credit',
+   'transaction_category_num': 17,
+   'transaction_id': '04b324ae-4a7b-4117-9293-d98d942bb565'},
+  {'account_id': '31b12334-f5cf-4ea8-ac5d-3782bbdd47c9',
+   'amount': 6.06,
+   'date': '2021-08-05',
+   'description': 'TARGET DEBIT CRD ACH TRAN   000681481903991 WEB ID: 1410215170',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'groceries_debit',
+   'transaction_category_num': 65,
+   'transaction_id': '51087e76-53e4-4fb8-b0fd-71397f112695'},
+  {'account_id': '04d41e3e-7a43-4a5c-9fe0-3be6e51365b7',
+   'amount': 100.0,
+   'date': '2021-09-13',
+   'description': 'Payment to Chase card ending in 9617 09/13',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'banktrnsfr_debit',
+   'transaction_category_num': 117,
+   'transaction_id': '7e2b3a4d-2ca7-4420-9e85-5845e9568a25'},
+  {'account_id': '175f0df3-b792-49fb-9ae2-6485c691318d',
+   'amount': -500.0,
+   'date': '2020-09-03',
+   'description': 'FEMA TREAS 310     MISC PAY 627445996700700 CCD ID: 9101036151',
+   'iso_currency_code': 'USD',
+   'transaction_category_code': 'taxrefund_credit',
+   'transaction_category_num': 7,
+   'transaction_id': 'ab49cc2a-b8ce-45a7-992c-5071620268ad'}
+  ]
+}
+</code></pre>
+
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search", "navigation.tracking", "navigation.indexes", "navigation.prune"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
